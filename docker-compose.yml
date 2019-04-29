@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  trigger:
+    container_name: trigger
+    image: chrishsieh/trigger
+    build:
+      context: .
+    tty: true
+    volumes:
+      - ./run.d/:/run.d/
